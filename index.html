@@ -265,6 +265,26 @@
             .day-activities {
                 flex-grow: 1;
             }
+        .location-link {
+            display: inline-block;
+            margin-top: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .location-link:hover {
+            background: rgba(255,255,255,0.3);
+            text-decoration: underline;
+        }
+
+        .location-link::before {
+            content: "📍";
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -272,8 +292,15 @@
 <div class="container">
     <header>
         <h1>🗓️ Planning Voyage</h1>
-        <div class="subtitle">Besse et Saint-Anastaise</div>
-    </header>
+        <div class="subtitle">
+            Besse et Saint-Anastaise<br>
+            <a href="https://maps.google.com/?cid=XXXXXXXXXXXXX" 
+               target="_blank" 
+               class="location-link">
+                Belambra Clubs Le Chambourguet
+            </a>
+        </div>
+    </header
 
     <button class="theme-toggle" id="themeBtn">🌙</button>
 
