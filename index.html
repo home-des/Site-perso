@@ -6,9 +6,9 @@
     <title>Planning Voyage 2025 - Besse et Saint-Anastaise</title>
     <style>
         :root {
-            --primary: #3498db;  /* Bleu */
+            --primary: #3498db; /* Bleu */
             --primary-dark: #2980b9;
-            --secondary: #f39c12;  /* Orange */
+            --secondary: #f39c12; /* Orange */
             --light: #f5f5f5;
             --dark: #121212;
             --text: #333;
@@ -18,10 +18,11 @@
             --transition: all 0.3s ease;
         }
 
+
         .dark-mode {
-            --primary: #2980b9;  /* Bleu plus foncé */
+            --primary: #2980b9; /* Bleu plus foncé */
             --primary-dark: #1a5276;
-            --secondary: #e67e22;  /* Orange plus foncé */
+            --secondary: #e67e22; /* Orange plus foncé */
             --light: #1e1e1e;
             --dark: #f5f5f5;
             --text: #f5f5f5;
@@ -30,11 +31,13 @@
             --shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
 
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
 
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
@@ -45,11 +48,13 @@
             padding: 0;
         }
 
+
         .container {
             max-width: 100%;
             margin: 0 auto;
             padding: 15px;
         }
+
 
         header {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -61,15 +66,18 @@
             box-shadow: var(--shadow);
         }
 
+
         h1 {
             font-size: 1.5rem;
             margin-bottom: 5px;
         }
 
+
         .subtitle {
             font-size: 0.9rem;
             opacity: 0.9;
         }
+
 
         .theme-toggle {
             position: fixed;
@@ -90,6 +98,7 @@
             color: var(--text-light);
         }
 
+
         .schedule {
             background: var(--card-bg);
             border-radius: 15px;
@@ -100,6 +109,7 @@
             border: 1px solid rgba(0,0,0,0.1);
         }
 
+
         .day {
             display: flex;
             flex-direction: column;
@@ -108,11 +118,13 @@
             padding-bottom: 15px;
         }
 
+
         .day:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
+
 
         .day-name {
             font-weight: bold;
@@ -120,6 +132,7 @@
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
+
 
         .activity {
             margin-bottom: 10px;
@@ -130,10 +143,12 @@
             border-left: 3px solid var(--secondary);
         }
 
+
         .activity:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+
 
         .activity a {
             color: var(--primary);
@@ -143,11 +158,13 @@
             align-items: center;
         }
 
+
         .activity a::before {
             content: "→";
             margin-right: 8px;
             color: var(--secondary);
         }
+
 
         .activity-desc {
             font-size: 0.85rem;
@@ -156,6 +173,7 @@
             margin-top: 5px;
             padding-left: 18px;
         }
+
 
         .section-title {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -170,9 +188,11 @@
             box-shadow: var(--shadow);
         }
 
+
         .section-title:hover {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
         }
+
 
         .section-title::before {
             content: "+";
@@ -181,18 +201,22 @@
             transition: var(--transition);
         }
 
+
         .section-title.open::before {
             content: "-";
         }
+
 
         .section-content {
             display: none;
             animation: fadeIn 0.3s ease;
         }
 
+
         .section-content.active {
             display: block;
         }
+
 
         .card {
             background: var(--card-bg);
@@ -204,9 +228,11 @@
             border-left: 3px solid var(--secondary);
         }
 
+
         .card:hover {
             transform: translateY(-3px);
         }
+
 
         .card a {
             color: var(--primary);
@@ -216,10 +242,12 @@
             align-items: center;
         }
 
+
         .waterfall::before {
             content: "💧";
             margin-right: 8px;
         }
+
 
         .activity-icon::before {
             content: "🎢";
@@ -227,11 +255,13 @@
             color: var(--secondary);
         }
 
+
         .restaurant::before {
             content: "🍴";
             margin-right: 8px;
             color: var(--secondary);
         }
+
 
         .address {
             display: block;
@@ -253,20 +283,26 @@
             transition: all 0.3s ease;
         }
 
+
         .location-link:hover {
             background: rgba(255,255,255,0.3);
             text-decoration: underline;
         }
+
 
         .location-link::before {
             content: "📍";
             margin-right: 5px;
         }
 
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0;
+            transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0);
+            }
         }
+
 
         @media (min-width: 768px) {
             .container {
@@ -287,6 +323,84 @@
                 flex-grow: 1;
             }
         }
+
+        /* --- Style pour la To-Do List --- */
+        .todo-input-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        #new-todo {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.2);
+            background: var(--light);
+            color: var(--text);
+            transition: var(--transition);
+        }
+        #new-todo:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        #add-todo-btn {
+            padding: 10px 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        #add-todo-btn:hover {
+            background: var(--primary-dark);
+        }
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #todo-list li {
+            background: var(--card-bg);
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #todo-list li:hover {
+            transform: translateY(-2px);
+        }
+        #todo-list li.completed {
+            opacity: 0.6;
+            background: #e0e0e0;
+            text-decoration: line-through;
+        }
+        .dark-mode #todo-list li.completed {
+            background: #3a3a3a;
+        }
+        #todo-list li.completed span {
+            color: #888;
+        }
+        .dark-mode #todo-list li.completed span {
+            color: #bbb;
+        }
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #e74c3c;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            padding: 5px;
+        }
+        .delete-btn:hover {
+            color: #c0392b;
+        }
     </style>
 </head>
 <body>
@@ -294,7 +408,8 @@
     <header>
         <h1>🗓️ Planning Voyage</h1>
         <div class="subtitle">
-            Besse et Saint-Anastaise<br>
+            Besse et Saint-Anastaise
+            <br>
             <a href="https://maps.google.com/?cid=XXXXXXXXXXXXX" 
                target="_blank" 
                class="location-link">
@@ -303,7 +418,9 @@
         </div>
     </header>
 
+
     <button class="theme-toggle" id="themeBtn">🌙</button>
+
 
     <div class="schedule">
         <div class="day">
@@ -311,56 +428,76 @@
             <div class="day-activities">
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=15848835630299318994" target="_blank">🚶‍Balade au Lac Pavin (~1h)</a>
-                    <div class="activity-desc">Lac de cratère volcanique, très photogénique. Tour du lac : ~1h (sentier plat, facile avec enfants).</div>
+                    <div class="activity-desc">Lac de cratère volcanique, très photogénique.
+                        Tour du lac : ~1h (sentier plat, facile avec enfants).
+                    </div>
                 </div>
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=290830376679885472" target="_blank">🏦 Visite du centre médiéval de Besse</a>
-                    <div class="activity-desc">Village médiéval avec ruelles pavées, beffroi, Château du Bailli. Boutiques de produits locaux.</div>
+                    <div class="activity-desc">Village médiéval avec ruelles pavées, beffroi, Château du Bailli.
+                        Boutiques de produits locaux.
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="day">
             <div class="day-name">Mardi</div>
             <div class="day-activities">
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=17142956739810283330" target="_blank">🥾 Rando Cascades de Chiloza (~2h)</a>
-                    <div class="activity-desc">Boucle de 2h max dans une forêt avec plusieurs cascades. Sentier ombragé, idéal pour une sortie familiale.</div>
+                    <div class="activity-desc">Boucle de 2h max dans une forêt avec plusieurs cascades.
+                        Sentier ombragé, idéal pour une sortie familiale.
+                    </div>
                 </div>
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=11587746209421440533" target="_blank">🚶‍Balade autour du Lac de Bourdouze (~40 min)</a>
-                    <div class="activity-desc">Petit lac tourbeux et paisible. Tour facile ~40 min, observation oiseaux & nature.</div>
+                    <div class="activity-desc">Petit lac tourbeux et paisible.
+                        Tour facile ~40 min, observation oiseaux & nature.
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="day">
             <div class="day-name">Mercredi</div>
             <div class="day-activities">
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=18055473594839901629" target="_blank">🧀 Visite ferme La Clef des Champs</a>
-                    <div class="activity-desc">Découverte de la fabrication de fromages. Animaux, traite des vaches, dégustation de Saint-Nectaire.</div>
+                    <div class="activity-desc">Découverte de la fabrication de fromages.
+                        Animaux, traite des vaches, dégustation de Saint-Nectaire.
+                    </div>
                 </div>
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=9364634044929165082" target="_blank">🥾 Petite rando à la Chapelle Notre-Dame de Vassivière (~1h A/R)</a>
-                    <div class="activity-desc">Chapelle du XVIᵉ siècle, balade facile (~1h aller-retour). Beau panorama sur les montagnes.</div>
+                    <div class="activity-desc">Chapelle du XVIᵉ siècle, balade facile (~1h aller-retour).
+                        Beau panorama sur les montagnes.
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="day">
             <div class="day-name">Jeudi</div>
             <div class="day-activities">
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=5629680813709623154" target="_blank">🥾 Cascade de Vaucoux (Anglard)</a>
-                    <div class="activity-desc">Chute d'eau d'une douzaine de mètres. Accès facile en ~15 min de marche.</div>
+                    <div class="activity-desc">Chute d'eau d'une douzaine de mètres.
+                        Accès facile en ~15 min de marche.
+                    </div>
                 </div>
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=723175952155500464" target="_blank">🎡 Super-Besse</a>
-                    <div class="activity-desc">Panorama depuis le sommet. Activités ludiques pour enfants (luge d'été, jeux, tyrolienne).</div>
+                    <div class="activity-desc">Panorama depuis le sommet.
+                        Activités ludiques pour enfants (luge d'été, jeux, tyrolienne).
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="day">
             <div class="day-name">Vendredi</div>
@@ -371,17 +508,22 @@
                 </div>
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=269151345930635047" target="_blank">🚶‍Balade au Lac des Hermines (~40 min, activités nautiques)</a>
-                    <div class="activity-desc">Balade familiale à plat (~40 min). Pédalos et activités nautiques en été.</div>
+                    <div class="activity-desc">Balade familiale à plat (~40 min).
+                        Pédalos et activités nautiques en été.
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="day">
             <div class="day-name">Samedi</div>
             <div class="day-activities">
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=13571132964208844918" target="_blank">🥾 Rando facile au Puy de Chambourguet (~2h)</a>
-                    <div class="activity-desc">Randonnée facile (boucle 2h). Vue panoramique sur tout le massif du Sancy.</div>
+                    <div class="activity-desc">Randonnée facile (boucle 2h).
+                        Vue panoramique sur tout le massif du Sancy.
+                    </div>
                 </div>
                 <div class="activity">
                     <a href="https://maps.google.com/?cid=290830376679885472" target="_blank">✨ Shopping souvenirs à Besse</a>
@@ -391,23 +533,31 @@
         </div>
     </div>
 
+
     <div class="section-title" data-target="waterfalls">
         💧 Cascades à visiter (moins de 3h de marche)
     </div>
     <div id="waterfalls" class="section-content">
         <div class="card">
             <a href="https://maps.google.com/?cid=13179596417322845320" target="_blank" class="waterfall">La Grande Cascade du Mont-Dore</a>
-            <div class="activity-desc">La plus haute d'Auvergne, une balade magnifique et rafraîchissante. Comptez environ 45 min de marche aller-retour.</div>
+            <div class="activity-desc">La plus haute d'Auvergne, une balade magnifique et rafraîchissante.
+                Comptez environ 45 min de marche aller-retour.
+            </div>
         </div>
         <div class="card">
             <a href="https://maps.google.com/?cid=7779232583120552182" target="_blank" class="waterfall">La Cascade de la Biche</a>
-            <div class="activity-desc">Une jolie chute d'eau au milieu de la forêt. Le sentier est facile et la balade dure environ 1h30 en boucle.</div>
+            <div class="activity-desc">Une jolie chute d'eau au milieu de la forêt.
+                Le sentier est facile et la balade dure environ 1h30 en boucle.
+            </div>
         </div>
         <div class="card">
             <a href="https://maps.google.com/?cid=8228012907676007496" target="_blank" class="waterfall">La Cascade de la Barthe</a>
-            <div class="activity-desc">Située près de Picherande, accessible via un sentier facile et bien balisé. La boucle prend environ 2h.</div>
+            <div class="activity-desc">Située près de Picherande, accessible via un sentier facile et bien balisé.
+                La boucle prend environ 2h.
+            </div>
         </div>
     </div>
+
 
     <div class="section-title" data-target="leisure">
         🎢 Loisirs et activités à Super-Besse
@@ -415,7 +565,9 @@
     <div id="leisure" class="section-content">
         <div class="card">
             <a href="https://maps.google.com/?cid=5990852581678216597" target="_blank" class="activity-icon">Tyrolienne Fantasticable</a>
-            <div class="activity-desc">Vol de 1600m au-dessus de la station à 120km/h. Sensations fortes garanties !</div>
+            <div class="activity-desc">Vol de 1600m au-dessus de la station à 120km/h.
+                Sensations fortes garanties !
+            </div>
         </div>
         <div class="card">
             <a href="https://maps.google.com/?cid=6015714806811591570" target="_blank" class="activity-icon">Xtrem Aventure de la Biche</a>
@@ -426,6 +578,7 @@
             <div class="activity-desc">Une piste de 500m pour retrouver les sensations de la glisse en plein été.</div>
         </div>
     </div>
+
 
     <div class="section-title" data-target="restaurants">
         🍽️ Restaurants conseillés
@@ -456,7 +609,19 @@
             <span class="address">9 Rdpt des Pistes, 63610 Besse-et-Saint-Anastaise</span>
         </div>
     </div>
+
+    <div class="section-title" data-target="todolist">
+        📝 Ma liste de rappels
+    </div>
+    <div id="todolist" class="section-content">
+        <div class="todo-input-container">
+            <input type="text" id="new-todo" placeholder="Ajouter un rappel...">
+            <button id="add-todo-btn">Ajouter</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
 </div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -468,6 +633,7 @@
             document.body.classList.add('dark-mode');
             themeBtn.textContent = '🌞';
         }
+
 
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -483,7 +649,79 @@
                 target.classList.toggle('active');
             });
         });
+
+        // To-Do List
+        const newTodoInput = document.getElementById('new-todo');
+        const addTodoBtn = document.getElementById('add-todo-btn');
+        const todoList = document.getElementById('todo-list');
+        const todoListKey = 'vacation_todos';
+
+        // Charger les tâches existantes
+        const loadTodos = () => {
+            const todos = JSON.parse(localStorage.getItem(todoListKey)) || [];
+            todos.forEach(todo => {
+                addTodoItem(todo.text, todo.completed);
+            });
+        };
+
+        // Sauvegarder les tâches
+        const saveTodos = () => {
+            const todos = [];
+            todoList.querySelectorAll('li').forEach(item => {
+                todos.push({
+                    text: item.querySelector('span').textContent,
+                    completed: item.classList.contains('completed')
+                });
+            });
+            localStorage.setItem(todoListKey, JSON.stringify(todos));
+        };
+
+        // Créer un élément de la liste de tâches
+        const addTodoItem = (text, completed = false) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${text}</span>
+                <button class="delete-btn">Supprimer</button>
+            `;
+            if (completed) {
+                li.classList.add('completed');
+            }
+
+            li.addEventListener('click', () => {
+                li.classList.toggle('completed');
+                saveTodos();
+            });
+
+            li.querySelector('.delete-btn').addEventListener('click', (e) => {
+                e.stopPropagation(); // Empêcher la bascule de l'état
+                li.remove();
+                saveTodos();
+            });
+
+            todoList.appendChild(li);
+        };
+
+        // Ajouter une nouvelle tâche
+        addTodoBtn.addEventListener('click', () => {
+            const text = newTodoInput.value.trim();
+            if (text) {
+                addTodoItem(text);
+                newTodoInput.value = '';
+                saveTodos();
+            }
+        });
+
+        // Ajouter une tâche avec la touche "Entrée"
+        newTodoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTodoBtn.click();
+            }
+        });
+
+        // Charger les tâches au démarrage
+        loadTodos();
     });
 </script>
 </body>
 </html>
+
