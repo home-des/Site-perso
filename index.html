@@ -92,21 +92,20 @@
             margin-top: 5px;
             font-weight: normal;
         }
-        .restaurant-list {
+        .restaurant-list, .waterfall-list {
             list-style-type: none;
             padding: 0;
             text-align: center;
+            margin-top: 10px;
         }
-        .restaurant-list li {
+        .restaurant-list li, .waterfall-list li {
             background: var(--restaurant-bg);
             margin: 10px 0;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             text-align: left;
             transition: background-color 0.3s;
         }
-
-        /* Dark mode toggle switch */
         .theme-switch-wrapper {
             display: flex;
             justify-content: flex-end;
@@ -255,6 +254,26 @@
         </tbody>
     </table>
 
+    ---
+
+    <h2>💧 Cascades à visiter à proximité (moins de 3h de marche)</h2>
+    <ul class="waterfall-list">
+        <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lac+Pavin8" target="_blank">La Grande Cascade du Mont-Dore</a>
+            <div class="description">La plus haute d'Auvergne, une balade magnifique et rafraîchissante. Comptez environ **45 min de marche** aller-retour pour un accès facile.</div>
+        </li>
+        <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lac+Pavin9" target="_blank">La Cascade de la Biche</a>
+            <div class="description">Une jolie chute d'eau au milieu de la forêt. Le sentier est facile et la balade dure environ **1h30** en boucle.</div>
+        </li>
+        <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Centre+médiéval+de+Besse+et+Saint-Anastaise0" target="_blank">La Cascade de la Barthe</a>
+            <div class="description">Située près de Picherande, elle est accessible via un sentier facile et bien balisé. La boucle prend environ **2h**.</div>
+        </li>
+    </ul>
+
+    ---
+
     <h2>🍽️ Restaurants conseillés</h2>
     <ul class="restaurant-list">
         <li>
@@ -284,7 +303,6 @@
     const toggleSwitch = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check for user's preferred theme from local storage
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
         body.classList.add(currentTheme);
