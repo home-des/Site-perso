@@ -241,6 +241,27 @@
             margin-top: 5px;
             padding-left: 23px;
         }
+        .location-link {
+            display: inline-block;
+            margin-top: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .location-link:hover {
+            background: rgba(255,255,255,0.3);
+            text-decoration: underline;
+        }
+
+        .location-link::before {
+            content: "📍";
+            margin-right: 5px;
+        }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
@@ -265,26 +286,6 @@
             .day-activities {
                 flex-grow: 1;
             }
-        .location-link {
-            display: inline-block;
-            margin-top: 5px;
-            color: white;
-            text-decoration: none;
-            font-size: 0.8rem;
-            background: rgba(255,255,255,0.2);
-            padding: 4px 8px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .location-link:hover {
-            background: rgba(255,255,255,0.3);
-            text-decoration: underline;
-        }
-
-        .location-link::before {
-            content: "📍";
-            margin-right: 5px;
         }
     </style>
 </head>
@@ -294,13 +295,13 @@
         <h1>🗓️ Planning Voyage</h1>
         <div class="subtitle">
             Besse et Saint-Anastaise<br>
-            <a href="https://maps.google.com/?cid=8612404946914643929&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
+            <a href="https://maps.google.com/?cid=XXXXXXXXXXXXX" 
                target="_blank" 
                class="location-link">
                 Belambra Clubs Le Chambourguet
             </a>
         </div>
-    </header
+    </header>
 
     <button class="theme-toggle" id="themeBtn">🌙</button>
 
@@ -309,7 +310,7 @@
             <div class="day-name">Lundi</div>
             <div class="day-activities">
                 <div class="activity">
-                    <a href="https://maps.google.com/?cid=15848835630299318994" target="_blank">🥾 Balade au Lac Pavin (~1h)</a>
+                    <a href="https://maps.google.com/?cid=15848835630299318994" target="_blank">🚶‍Balade au Lac Pavin (~1h)</a>
                     <div class="activity-desc">Lac de cratère volcanique, très photogénique. Tour du lac : ~1h (sentier plat, facile avec enfants).</div>
                 </div>
                 <div class="activity">
@@ -327,7 +328,7 @@
                     <div class="activity-desc">Boucle de 2h max dans une forêt avec plusieurs cascades. Sentier ombragé, idéal pour une sortie familiale.</div>
                 </div>
                 <div class="activity">
-                    <a href="https://maps.google.com/?cid=11587746209421440533" target="_blank">🚶‍➡️ Balade autour du Lac de Bourdouze (~40 min)</a>
+                    <a href="https://maps.google.com/?cid=11587746209421440533" target="_blank">🚶‍Balade autour du Lac de Bourdouze (~40 min)</a>
                     <div class="activity-desc">Petit lac tourbeux et paisible. Tour facile ~40 min, observation oiseaux & nature.</div>
                 </div>
             </div>
@@ -365,11 +366,11 @@
             <div class="day-name">Vendredi</div>
             <div class="day-activities">
                 <div class="activity">
-                    <a href="https://maps.google.com/?cid=705837639345710974" target="_blank">💧 Espace Aqualudique (Super-Besse)</a>
+                    <a href="https://maps.google.com/?cid=705837639345710974" target="_blank">💧Espace Aqualudique (Super-Besse)</a>
                     <div class="activity-desc">Bassins intérieurs/extérieurs, toboggan, zone enfants.</div>
                 </div>
                 <div class="activity">
-                    <a href="https://maps.google.com/?cid=269151345930635047" target="_blank">🚶‍➡️ Balade au Lac des Hermines (~40 min, activités nautiques)</a>
+                    <a href="https://maps.google.com/?cid=269151345930635047" target="_blank">🚶‍Balade au Lac des Hermines (~40 min, activités nautiques)</a>
                     <div class="activity-desc">Balade familiale à plat (~40 min). Pédalos et activités nautiques en été.</div>
                 </div>
             </div>
@@ -379,11 +380,11 @@
             <div class="day-name">Samedi</div>
             <div class="day-activities">
                 <div class="activity">
-                    <a href="https://maps.google.com/?cid=13571132964208844918" target="_blank">Rando facile au Puy de Chambourguet (~2h)</a>
+                    <a href="https://maps.google.com/?cid=13571132964208844918" target="_blank">🥾 Rando facile au Puy de Chambourguet (~2h)</a>
                     <div class="activity-desc">Randonnée facile (boucle 2h). Vue panoramique sur tout le massif du Sancy.</div>
                 </div>
                 <div class="activity">
-                    <a href="https://maps.google.com/?cid=290830376679885472" target="_blank">Shopping souvenirs à Besse</a>
+                    <a href="https://maps.google.com/?cid=290830376679885472" target="_blank">✨ Shopping souvenirs à Besse</a>
                     <div class="activity-desc">Fromages, miel, myrtilles, charcuterie auvergnate.</div>
                 </div>
             </div>
